@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>nomatchaphobia - Home</title>
@@ -56,8 +56,8 @@
 
     <div id="footer"></div>
 
-    <script src="/assets/js/shared.js"></script>
-    <script src="/assets/js/products.js"></script>
+    <script src="assets/js/shared.js"></script>
+    <script src="assets/js/products.js"></script>
     <script>
     const productList = document.getElementById("products-list");
 
@@ -67,7 +67,7 @@
           <img src="${p.image}" alt="${p.name}">
           <h3>${p.name}</h3>
           <p>${p.price}</p>
-          <a href="/partials/product.html?id=${p.id}" class="btn">View Details</a>
+          <a href="partials/product.html?id=${p.id}" class="btn">View Details</a>
         </div>
       `;
     });

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>nomatchaphobia - Home</title>
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+    <main>
+        <header>
+
+            <h1>No Matcha Phobia</h1>
+            <p>No Matcha? Now That's Scary. Good thing we got you covered!</p>
+        </header>
+
+        <section class="in-stock-section">
+            <h2>In Stock Products</h2>
+            <div class="products-grid">
+                <!-- Example in-stock products from all categories -->
+                <div class="product-card">
+                    <img src="assets/images/" alt="Matcha Brand A - Premium Grade" />
+                    <div class="product-info">
+                        <div class="product-title">Matcha Brand A - Premium Grade</div>
+                        <div class="product-price">$28.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/hojicha-brandX-1.jpg" alt="Hojicha Brand X - Roasted Leaf" />
+                    <div class="product-info">
+                        <div class="product-title">Hojicha Brand X - Roasted Leaf</div>
+                        <div class="product-price">$18.50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/utensil-whisk.jpg" alt="Bamboo Tea Whisk" />
+                    <div class="product-info">
+                        <div class="product-title">Bamboo Tea Whisk</div>
+                        <div class="product-price">$15.00</div>
+                    </div>
+                </div>
+                
+                <!-- Add more products as you like -->
+            </div>
+
+        </section>
+        <h1>Our Products</h1>
+        <div class="products-grid" id="products-list"></div>
+    </main>
+
+
+    <div id="footer"></div>
+
+    <script src="assets/js/shared.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script>
+    const productList = document.getElementById("products-list");
+
+    products.forEach(p => {
+      productList.innerHTML += `
+        <div class="product-card">
+          <img src="${p.image}" alt="${p.name}">
+          <h3>${p.name}</h3>
+          <p>${p.price}</p>
+          <a href="partials/product.html?id=${p.id}" class="btn">View Details</a>
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+
+</html>

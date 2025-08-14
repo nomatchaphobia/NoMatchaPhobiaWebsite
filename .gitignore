@@ -1,0 +1,15 @@
+# Ignore system files (macOS/Windows)
+.DS_Store          # macOS metadata
+Thumbs.db          # Windows thumbnails
+
+# Ignore dependency folders
+node_modules/      # Node.js dependencies
+.vscode/           # VS Code settings (optional)
+
+# Ignore build/output folders
+dist/              # Production build files
+.sass-cache/       # Sass cache
+
+# Ignore environment files (sensitive data!)
+.env               # API keys/secrets
+*.local            # Local config files

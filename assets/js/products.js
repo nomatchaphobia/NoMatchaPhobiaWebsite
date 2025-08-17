@@ -8,6 +8,7 @@ const products = [
     image: "assets/images/matcha/kinrin.png",
     description: "",
     brand: "Marukyu Koyamaen",
+    stock: 1,
   },
   {
     id: "aoarashi",
@@ -17,6 +18,7 @@ const products = [
     image: "assets/images/matcha/aoarashi.png",
     description: "",
     brand: "Marukyu Koyamaen",
+    stock: 2,
   },
   {
     id: "wako",
@@ -26,6 +28,7 @@ const products = [
     image: "assets/images/matcha/wako.png",
     description: "",
     brand: "Marukyu Koyamaen",
+    stock: 5,
   },
   {
     id: "isuzu",
@@ -35,6 +38,7 @@ const products = [
     image: "assets/images/matcha/isuzu.png",
     description: "",
     brand: "Marukyu Koyamaen",
+    stock: 0,
   },
   {
     id: "ayanoshiro",
@@ -44,6 +48,7 @@ const products = [
     image: "assets/images/matcha/ayanoshiro.png",
     description: "",
     brand: "Marukyu Koyamaen",
+    stock: 1,
   },
   {
     id: "miyonomukashi",
@@ -53,6 +58,7 @@ const products = [
     image: "assets/images/matcha/miyonomukashi.png",
     description: "",
     brand: "Marukyu Koyamaen",
+    stock: 1,
   },
   {
     id: "ayanomori",
@@ -62,15 +68,7 @@ const products = [
     image: "assets/images/matcha/ayanomori.png",
     description: "",
     brand: "Kanbayashi Shunsho",
-  },
-  {
-    id: "mozumukashi",
-    name: "Mozu Mukashi - Kanbayashi Shunsho",
-    category: "matcha",
-    price: "$52",
-    image: "assets/images/matcha/mozumukashi.png",
-    description: "",
-    brand: "Kanbayashi Shunsho",
+    stock: 0,
   },
   {
     id: "matsukaze",
@@ -80,6 +78,7 @@ const products = [
     image: "assets/images/matcha/",
     description: "",
     brand: "Kanbayashi Shunsho",
+    stock: 2,
   },
   {
     id: "gounnoshiro",
@@ -89,6 +88,7 @@ const products = [
     image: "assets/images/matcha/",
     description: "",
     brand: "Kanbayashi Shunsho",
+    stock: 1,
   },
   {
     id: "biwanoshiro",
@@ -98,6 +98,7 @@ const products = [
     image: "assets/images/matcha/biwanoshiro.png",
     description: "",
     brand: "Kanbayashi Shunsho",
+    stock: 1,
   },
   {
     id: "yaeyama",
@@ -107,6 +108,7 @@ const products = [
     image: "assets/images/matcha/yaeyama.png",
     description: "",
     brand: "Aoi Seicha",
+    stock: 1,
   },
   {
     id: "samidori",
@@ -116,24 +118,7 @@ const products = [
     image: "assets/images/matcha/samidori.png",
     description: "",
     brand: "Yamamasa Koyamaen",
-  },
-  {
-    id: "yomonokaori",
-    name: "Yomo no Kaori - Yamamasa Koyamaen",
-    category: "matcha",
-    price: "$55",
-    image: "assets/images/matcha/",
-    description: "",
-    brand: "Yamamasa Koyamaen",
-  },
-  {
-    id: "yuzan",
-    name: "Yuzan - Saijoen",
-    category: "matcha",
-    price: "$45",
-    image: "assets/images/matcha/",
-    description: "",
-    brand: "Saijoen",
+    stock: 2,
   },
   {
     id: "hohopremium",
@@ -143,6 +128,7 @@ const products = [
     image: "assets/images/",
     description: "",
     brand: "Hoho",
+    stock: 10,
   },
   {
     id: "ykrich",
@@ -152,6 +138,7 @@ const products = [
     image: "assets/images/hojicha/richyk.png",
     description: "",
     brand: "Yamamasa Koyamaen",
+    stock: 4,
   },
   {
     id: "resinwhisk",
@@ -161,51 +148,7 @@ const products = [
     image: "assets/images/utensil/resin.png",
     description: "",
     brand: "Nakamura Tokichi",
-  },
-  {
-    id: "ujimukashihorii",
-    name: "Uji Mukashi - Horii Shichimeien",
-    category: "matcha",
-    price: "$68",
-    image: "assets/images/matcha/",
-    description: "",
-    brand: "Horii Shichimeien",
-  },
-  {
-    id: "agatanoshirohorii",
-    name: "Agata no Shiro - Horii Shichimeien",
-    category: "matcha",
-    price: "$75",
-    image: "assets/images/matcha/",
-    description: "",
-    brand: "Horii Shichimeien",
-  },
-  {
-    id: "karin",
-    name: "Karin - CHARLOTTE",
-    category: "matcha",
-    price: "$",
-    image: "assets/images/matcha/",
-    description: "",
-    brand: "CHARLOTTE",
-  },
-  {
-    id: "sumire",
-    name: "Sumire - CHARLOTTE",
-    category: "matcha",
-    price: "$",
-    image: "assets/images/matcha/",
-    description: "",
-    brand: "CHARLOTTE",
-  },
-  {
-    id: "mibu",
-    name: "Mibu - CHARLOTTE",
-    category: "matcha",
-    price: "$",
-    image: "assets/images/matcha/",
-    description: "",
-    brand: "CHARLOTTE",
+    stock: 1,
   },
 ];
 

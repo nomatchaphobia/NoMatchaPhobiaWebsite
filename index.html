@@ -6,17 +6,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>nomatchaphobia - Home</title>
-    <base href="https://nomatchaphobia.github.io/NoMatchaPhobiaWebsite/" target="_blank">
 </head>
+
 <body>
 
-    <div id="navbar"></div>
-    <script>
-    fetch("partials/nav.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("navbar").innerHTML = data)
-        .catch(err => console.error("Navbar load error:", err));
-    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="pages/shop.html">Shop</a>
+                <ul>
+                    <li>
+                        <a href="pages/matcha.html">Matcha</a>
+                        <ul>
+                            <li><a href="partials/brand.html?brand=Marukyu%20Koyamaen">Marukyu Koyamaen</a></li>
+                            <li><a href="partials/brand.html?brand=Kanbayashi%20Shunsho">Kanbayashi Shunsho</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="hojicha.html">Hojicha</a>
+                        <ul>
+                            <li><a href="hojicha-brandX.html">Hoho</a></li>
+                            <li><a href="hojicha-brandY.html">Yamamasa Koyamaen</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="utensil.html">Utensil</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
 
     <main>
@@ -33,20 +53,16 @@
     </main>
 
 
-    <div id="footer"></div>
-    <script>
-    fetch("partials/footer.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("footer").innerHTML = data)
-        .catch(err => console.error("Footer load error:", err));
-    </script>
+    <footer>
+        &copy; 2025 nomatchaphobia | All rights reserved
+    </footer>
 
     <script src="assets/js/products.js"></script>
     <script>
 
-    const inStockProducts = document.getElementById("in-stock-products");
-    products.filter(p => p.stock > 0).forEach(p => {
-      inStockProducts.innerHTML += `
+        const inStockProducts = document.getElementById("in-stock-products");
+        products.filter(p => p.stock > 0).forEach(p => {
+            inStockProducts.innerHTML += `
         <div class="product-card">
           <img src="${p.image}" alt="${p.name}">
           <h3>${p.name}</h3>
@@ -54,8 +70,8 @@
           <a href="partials/product.html?id=${p.id}" class="btn">View Details</a>
         </div>
       `;
-    });
-  </script>
+        });
+    </script>
 
 </body>
 

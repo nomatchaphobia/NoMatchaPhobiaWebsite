@@ -7,37 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>nomatchaphobia - Home</title>
 </head>
-
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li>
-                <a href="../pages/shop.html">Shop</a>
-                <ul>
-                    <li>
-                        <a href="../pages/matcha.html">Matcha</a>
-                        <ul>
-                            <li><a href="../partials/brand.html?brand=Marukyu%20Koyamaen">Marukyu Koyamaen</a></li>
-                            <li><a href="../partials/brand.html?brand=Kanbayashi%20Shunsho">Kanbayashi Shunsho</a></li>
-                            <li><a href="matcha-brandC.html">CHARLOTTE NEW MATCHA</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="hojicha.html">Hojicha</a>
-                        <ul>
-                            <li><a href="hojicha-brandX.html">Hoho</a></li>
-                            <li><a href="hojicha-brandY.html">Yamamasa Koyamaen</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="utensil.html">Utensil</a></li>
-                </ul>
-            </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="navbar"></div>
 
 
     <main>
@@ -72,7 +44,7 @@
                         <div class="product-price">$15.00</div>
                     </div>
                 </div>
-
+                
                 <!-- Add more products as you like -->
             </div>
 
@@ -82,17 +54,15 @@
     </main>
 
 
-    <footer>
-        &copy; 2025 nomatchaphobia | All rights reserved
-    </footer>
+    <div id="footer"></div>
 
     <script src="assets/js/shared.js"></script>
     <script src="assets/js/products.js"></script>
     <script>
-        const productList = document.getElementById("products-list");
+    const productList = document.getElementById("products-list");
 
-        products.forEach(p => {
-            productList.innerHTML += `
+    products.forEach(p => {
+      productList.innerHTML += `
         <div class="product-card">
           <img src="${p.image}" alt="${p.name}">
           <h3>${p.name}</h3>
@@ -100,8 +70,8 @@
           <a href="partials/product.html?id=${p.id}" class="btn">View Details</a>
         </div>
       `;
-        });
-    </script>
+    });
+  </script>
 
 </body>
 

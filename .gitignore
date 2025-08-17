@@ -1,6 +1,6 @@
-# Ignore system files (macOS/Windows)
-.DS_Store          # macOS metadata
-Thumbs.db          # Windows thumbnails
+# macOS system files
+.DS_Store
+._*
 
 # Ignore dependency folders
 node_modules/      # Node.js dependencies

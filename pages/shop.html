@@ -43,13 +43,9 @@
     <div class="products-grid" id="products-list"></div>
   </main>
 
-  <div id="footer"></div>
-  <script>
-    fetch("../partials/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer").innerHTML = data)
-      .catch(err => console.error("Footer load error:", err));
-  </script>
+  <footer>
+    &copy; 2025 nomatchaphobia | All rights reserved
+</footer>
 
 
   <script src="../assets/js/products.js"></script>

@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>No Matcha Phobia - Shop</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+
 <body>
 
   <div id="navbar"></div>
+  <script>
+    fetch("../partials/nav.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data)
+      .catch(err => console.error("Navbar load error:", err));
+  </script>
 
   <main>
     <h1>Our Products</h1>
@@ -16,8 +24,14 @@
   </main>
 
   <div id="footer"></div>
+  <script>
+    fetch("../partials/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data)
+      .catch(err => console.error("Footer load error:", err));
+  </script>
 
-  <script src="../assets/js/shared.js"></script>
+
   <script src="../assets/js/products.js"></script>
   <script>
     const productList = document.getElementById("products-list");
@@ -35,4 +49,5 @@
   </script>
 
 </body>
+
 </html>

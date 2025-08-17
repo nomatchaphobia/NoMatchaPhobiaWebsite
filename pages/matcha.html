@@ -23,7 +23,7 @@
             <p>Explore our premium selection of Matcha from various brands.</p>
         </header>
 
-        <div id="matcha-products-container" class="products-grid">
+        <div id="products-list" class="products-grid">
     </div>
             <aside class="brand-list">
                 <h3>Brands</h3>
@@ -48,5 +48,10 @@
 </body>
 
 <script src="../assets/js/products.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts('matcha');  // Only shows matcha
+    });
+</script>
 
 </html>

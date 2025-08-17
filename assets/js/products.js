@@ -153,22 +153,24 @@ const products = [
 ];
 
 // Function to filter and render matcha products
-function renderMatchaProducts() {
-  const matchaProducts = products.filter(product => product.category === "matcha");
-  const container = document.getElementById("matcha-products-container");
-
+function renderProducts(category) {
+  const container = document.getElementById("products-list");
   if (!container) return;
+  
+  const filteredProducts = category === 'all' 
+    ? products 
+    : products.filter(p => p.category === category);
 
-  container.innerHTML = matchaProducts.map(product => `
+  // Generate HTML
+  container.innerHTML = filteredProducts.map(product => `
     <div class="product-card">
-      <img src="${product.image}" alt="${product.name}">
+      <img src="../${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
-      <p>$${product.price}</p>
-      <p>${product.description}</p>
-      <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+      <p>${product.price}</p>
+      ${product.stock > 0 
+        ? `<button class="add-to-cart">Add to Cart</button>`
+        : `<button disabled>Sold Out</button>`
+      }
     </div>
-  `).join("");
+  `).join('');
 }
-
-// Call the function when the DOM loads
-document.addEventListener("DOMContentLoaded", renderMatchaProducts);

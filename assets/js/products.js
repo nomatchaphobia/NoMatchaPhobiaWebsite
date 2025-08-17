@@ -174,3 +174,10 @@ function renderProducts(category) {
     </div>
   `).join('');
 }
+
+// Add this to products.js
+function getProductsByBrand(brandSlug) {
+  return products.filter(product => 
+    product.brand.toLowerCase().replace(/\s+/g, '-') === brandSlug
+  );
+}

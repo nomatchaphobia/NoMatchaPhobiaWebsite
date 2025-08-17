@@ -21,34 +21,9 @@
 
         <section class="in-stock-section">
             <h2>In Stock Products</h2>
-            <div class="products-grid">
-                <!-- Example in-stock products from all categories -->
-                <div class="product-card">
-                    <img src="assets/images/" alt="Matcha Brand A - Premium Grade" />
-                    <div class="product-info">
-                        <div class="product-title">Matcha Brand A - Premium Grade</div>
-                        <div class="product-price">$28.00</div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/hojicha-brandX-1.jpg" alt="Hojicha Brand X - Roasted Leaf" />
-                    <div class="product-info">
-                        <div class="product-title">Hojicha Brand X - Roasted Leaf</div>
-                        <div class="product-price">$18.50</div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/utensil-whisk.jpg" alt="Bamboo Tea Whisk" />
-                    <div class="product-info">
-                        <div class="product-title">Bamboo Tea Whisk</div>
-                        <div class="product-price">$15.00</div>
-                    </div>
-                </div>
-                
-                <!-- Add more products as you like -->
-            </div>
-
+            <div class="products-grid" id="in-stock-products"></div>
         </section>
+
         <h1>Our Products</h1>
         <div class="products-grid" id="products-list"></div>
     </main>
@@ -63,6 +38,18 @@
 
     products.forEach(p => {
       productList.innerHTML += `
+        <div class="product-card">
+          <img src="${p.image}" alt="${p.name}">
+          <h3>${p.name}</h3>
+          <p>${p.price}</p>
+          <a href="partials/product.html?id=${p.id}" class="btn">View Details</a>
+        </div>
+      `;
+    });
+
+    const inStockProducts = document.getElementById("in-stock-products");
+    products.filter(p => p.stock > 0).forEach(p => {
+      inStockProducts.innerHTML += `
         <div class="product-card">
           <img src="${p.image}" alt="${p.name}">
           <h3>${p.name}</h3>

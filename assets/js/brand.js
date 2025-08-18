@@ -1,17 +1,15 @@
-function renderBrandProducts() {
+function renderBrandProducts(brand) {
   const container = document.getElementById("products-list");
   if (!container) return;
 
-  // Get raw brand name from URL (e.g. "Marukyu%20Koyamaen")
-  const brandName = decodeURIComponent(
-    new URLSearchParams(window.location.search).get('brand')
-  );
 
   // Filter products by EXACT brand match
-  const brandProducts = products.filter(p => p.brand === brandName);
+  const filteredProducts = brand === 'all'
+    ? products
+    : products.filter(p => p.brand === brand);
 
-  container.innerHTML = brandProducts.length > 0
-    ? brandProducts.map(product => `
+  container.innerHTML = filteredProducts.length > 0
+    ? filteredProducts.map(product => `
         <div class="product-card">
           <img src="../${product.image}" alt="${product.name}">
           <h3>${product.name}</h3>
@@ -22,7 +20,5 @@ function renderBrandProducts() {
           }
         </div>
       `).join('')
-    : `<p class="no-products">No ${brandName} products found.</p>`;
+    : `<p class="no-products">No ${brand} products found.</p>`;
 }
-
-document.addEventListener('DOMContentLoaded', renderBrandProducts);

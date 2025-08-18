@@ -207,3 +207,16 @@ footer {
     margin-top: 15px;
     font-size: 1em;
 }
+
+a.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: buttontext;
+    background-color: #428542;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+}

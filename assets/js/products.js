@@ -165,6 +165,7 @@ function renderProducts(category) {
       <img src="../${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>${product.price}</p>
+      <a href="partials/product.html?id=${product.id}" class="btn">View Details</a>
       ${product.stock > 0
       ? `<button class="add-to-cart">Add to Cart</button>`
       : `<button disabled>Sold Out</button>`

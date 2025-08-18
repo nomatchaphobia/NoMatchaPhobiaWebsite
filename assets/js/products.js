@@ -152,32 +152,30 @@ const products = [
   },
 ];
 
-// Function to filter and render matcha products
 function renderProducts(category) {
   const container = document.getElementById("products-list");
   if (!container) return;
-  
-  const filteredProducts = category === 'all' 
-    ? products 
+
+  const filteredProducts = category === 'all'
+    ? products
     : products.filter(p => p.category === category);
 
-  // Generate HTML
   container.innerHTML = filteredProducts.map(product => `
     <div class="product-card">
       <img src="../${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>${product.price}</p>
-      ${product.stock > 0 
-        ? `<button class="add-to-cart">Add to Cart</button>`
-        : `<button disabled>Sold Out</button>`
-      }
+      ${product.stock > 0
+      ? `<button class="add-to-cart">Add to Cart</button>`
+      : `<button disabled>Sold Out</button>`
+    }
     </div>
   `).join('');
 }
 
 // Add this to products.js
 function getProductsByBrand(brandSlug) {
-  return products.filter(product => 
+  return products.filter(product =>
     product.brand.toLowerCase().replace(/\s+/g, '-') === brandSlug
   );
 }

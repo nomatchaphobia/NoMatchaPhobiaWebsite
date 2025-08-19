@@ -192,6 +192,7 @@ footer {
     margin: auto;
     text-align: center;
     padding: 20px;
+    align-items: center;
 }
 
 .product-detail img.product-image {
@@ -223,12 +224,15 @@ a.btn {
 }
 
 .btn {
-    margin: auto;
-    padding: 0.5rem;
+    display:block;
+    margin: 0 auto;
+    padding: 10px 20px;
     background: #4CAF50;
+    /* Match your theme */
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    text-align: center;
-    border-radius: 8px;
+    font-size: 1rem;
+    transition: background 0.3s;
 }

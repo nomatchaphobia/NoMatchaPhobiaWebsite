@@ -25,6 +25,8 @@
     const backButton = document.getElementById('back-button');
     if (returnTo.includes('matcha')) {
       backButton.textContent = '← Return to Matcha';
+    } else if (returnTo.includes('index')) {
+      backButton.textContent = '← Return to Home';
     } else if (returnTo.includes('hojicha')) {
       backButton.textContent = '← Return to Hojicha';
     } else if (returnTo.includes('utensil')) {
@@ -76,8 +78,10 @@
   </nav>
 
   <main>
-    <div id="product-details" class="product-detail"></div>
+    <div id="product-details" class="product-detail">
+    </div>
     <button id="back-button" class="btn">← Return </button>
+    
 
   </main>
 

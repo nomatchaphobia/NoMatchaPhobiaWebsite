@@ -8,31 +8,43 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const returnTo = urlParams.get('returnTo') || '../pages/shop.html'; // Fallback
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const brandSlug = urlParams.get('brand');
+    const returnTo = urlParams.get('returnTo') || '../pages/shop.html'; // Fallback
+    const backUrl = brandSlug
+      ? `/pages/brand.html?brand=${brandSlug}`
+      : returnTo;
+    console.log('Return to:', returnTo);
 
-        document.getElementById('back-button').addEventListener('click', () => {
-          window.location.href = returnTo; // Redirect to the stored page
-        });
+    document.getElementById('back-button').addEventListener('click', () => {
+      window.location.href = returnTo; // Redirect to the stored page
+    });
 
-        // Optional: Update button text dynamically
-        const backButton = document.getElementById('back-button');
-        if (returnTo.includes('matcha')) {
-          backButton.textContent = '← Return to Matcha';
-        } else if (returnTo.includes('hojicha')) {
-          backButton.textContent = '← Return to Hojicha';
-        } else if (returnTo.includes('utensil')) {
-          backButton.textContent = '← Return to Utensils';
-        } else if (returnTo.includes('brand')) {
-          backButton.textContent = '← Return to Brand';
-        } 
-        else {
-          backButton.textContent = '← Return to Shop';
-        }
-        // Defaults to "Return to Shop" if no match
-      });
-    </script>
+    // Optional: Update button text dynamically
+    const backButton = document.getElementById('back-button');
+    if (returnTo.includes('matcha')) {
+      backButton.textContent = '← Return to Matcha';
+    } else if (returnTo.includes('hojicha')) {
+      backButton.textContent = '← Return to Hojicha';
+    } else if (returnTo.includes('utensil')) {
+      backButton.textContent = '← Return to Utensils';
+    } else if (returnTo.includes('Marukyu Koyamaen')) {
+      backButton.textContent = '← Return to Marukyu Koyamaen';
+    } else if (returnTo.includes('Kanbayashi Shunsho')) {
+      backButton.textContent = '← Return to Kanbayashi Shunsho';
+    } else if (returnTo.includes('Hoho')) {
+      backButton.textContent = '← Return to Hoho';
+    } else if (returnTo.includes('Yamamasa Koyamaen')) {
+      backButton.textContent = '← Return to Yamamasa Koyamaen';
+    }
+    else {
+      backButton.textContent = '← Return to Shop';
+    }
+    // Defaults to "Return to Shop" if no match
+  });
+</script>
+
 <body>
 
   <nav>
@@ -66,7 +78,7 @@
   <main>
     <div id="product-details" class="product-detail"></div>
     <button id="back-button" class="btn">← Return </button>
-    
+
   </main>
 
   <footer>

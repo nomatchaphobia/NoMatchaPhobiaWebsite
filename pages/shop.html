@@ -12,7 +12,7 @@
 
   <div id="nav-container"></div>
   <script>
-    fetch('/partials/nav.html')
+    fetch('../partials/nav.html')
     .then(response => response.text())
     .then(html => {
         document.getElementById('nav-container').innerHTML = html;

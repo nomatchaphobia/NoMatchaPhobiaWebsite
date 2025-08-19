@@ -212,12 +212,23 @@ footer {
 }
 
 a.btn {
-  margin-top: auto;
-  padding: 0.5rem;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 8px;
+    margin-top: auto;
+    padding: 0.5rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.btn {
+    margin: auto;
+    padding: 0.5rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
 }

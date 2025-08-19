@@ -10,42 +10,29 @@
 
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li>
-        <a href="../pages/shop.html">Shop</a>
-        <ul>
-          <li>
-            <a href="../pages/matcha.html">Matcha</a>
-            <ul>
-              <li><a href="../pages/brand.html?brand=Marukyu%20Koyamaen">Marukyu Koyamaen</a></li>
-              <li><a href="../pages/brand.html?brand=Kanbayashi%20Shunsho">Kanbayashi Shunsho</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="hojicha.html">Hojicha</a>
-            <ul>
-              <li><a href="brand.html?brand=Hoho">Hoho</a></li>
-              <li><a href="brand.html?brand=Yamamasa%20Koyamaen">Yamamasa Koyamaen</a></li>
-            </ul>
-          </li>
-          <li><a href="utensil.html">Utensil</a></li>
-        </ul>
-      </li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
+  <div id="nav-container"></div>
+  <script>
+    fetch('/partials/nav.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('nav-container').innerHTML = html;
+    })
+    .catch(err => console.error('Failed to load navigation:', err));
+  </script>
   <main>
     <h1>Our Products</h1>
     <div class="products-grid" id="products-list"></div>
   </main>
 
-  <footer>
-    &copy; 2025 nomatchaphobia | All rights reserved
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+    fetch('/partials/footer.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('footer-container').innerHTML = html;
+    })
+    .catch(err => console.error('Failed to load footer', err));
+  </script>
 
 
   <script src="../assets/js/products.js"></script>

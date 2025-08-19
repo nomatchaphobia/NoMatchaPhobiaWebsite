@@ -67,7 +67,7 @@
           <img src="${p.image}" alt="${p.name}">
           <h3>${p.name}</h3>
           <p>${p.price}</p>
-          <a href="partials/product.html?id=${p.id}" class="btn">View Details</a>
+          <a href="partials/product.html?id=${p.id}&returnTo=${encodeURIComponent(window.location.pathname)}" class="btn">View Details</a>
         </div>
       `;
         });

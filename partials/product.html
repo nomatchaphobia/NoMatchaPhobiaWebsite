@@ -19,9 +19,16 @@
         // Optional: Update button text dynamically
         const backButton = document.getElementById('back-button');
         if (returnTo.includes('matcha')) {
-          backButton.textContent = '← Back to Matcha';
+          backButton.textContent = '← Return to Matcha';
         } else if (returnTo.includes('hojicha')) {
-          backButton.textContent = '← Back to Hojicha';
+          backButton.textContent = '← Return to Hojicha';
+        } else if (returnTo.includes('utensil')) {
+          backButton.textContent = '← Return to Utensils';
+        } else if (returnTo.includes('brand')) {
+          backButton.textContent = '← Return to Brand';
+        } 
+        else {
+          backButton.textContent = '← Return to Shop';
         }
         // Defaults to "Return to Shop" if no match
       });
@@ -58,7 +65,7 @@
 
   <main>
     <div id="product-details" class="product-detail"></div>
-    <button id="back-button" class="btn">← Return</button>
+    <button id="back-button" class="btn">← Return </button>
     
   </main>
 

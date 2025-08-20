@@ -10,13 +10,9 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const brandSlug = urlParams.get('brand');
     const returnTo = urlParams.get('returnTo') || '../pages/shop.html'; // Fallback
-    const backUrl = brandSlug
-      ? `pages/brand.html?brand=${encodeURIComponent(brandSlug)}`
-      : returnTo;
 
-    console.log('brandSlug:', encodeURIComponent(brandSlug));
+    console.log('returnTo:', returnTo);
 
     document.getElementById('back-button').addEventListener('click', () => {
       window.location.href = returnTo; // Redirect to the stored page
@@ -82,7 +78,7 @@
     <div id="product-details" class="product-detail">
     </div>
     <button id="back-button" class="btn">← Return </button>
-    
+
 
   </main>
 

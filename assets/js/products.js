@@ -160,12 +160,17 @@ function renderProducts(category) {
     ? products
     : products.filter(p => p.category === category);
 
+  const pathDepth = window.location.pathname.split('/').length -2;
+  
+  const depth = '../'.repeat(pathDepth);
+  const currentPage = window.location.pathname.split('/').pop();
+  
   container.innerHTML = filteredProducts.map(product => `
     <div class="product-card">
       <img src="../${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>${product.price}</p>
-      <a href="../partials/product.html?id=${product.id}&returnTo=${encodeURIComponent(window.location.pathname)}" class="btn">View Details</a>
+      <a href="../partials/product.html?id=${product.id}&returnTo=${depth + currentPage}" class="btn">View Details</a>
       ${product.stock > 0
       ? `<button class="add-to-cart">Add to Cart</button>`
       : `<button disabled>Sold Out</button>`

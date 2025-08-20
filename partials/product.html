@@ -12,7 +12,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const returnTo = urlParams.get('returnTo') || '../pages/shop.html'; // Fallback
 
-    console.log('returnTo:', returnTo);
+    console.log(returnTo);
 
     document.getElementById('back-button').addEventListener('click', () => {
       window.location.href = returnTo; // Redirect to the stored page

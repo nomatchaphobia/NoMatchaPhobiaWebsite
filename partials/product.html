@@ -13,7 +13,7 @@
     const brandSlug = urlParams.get('brand');
     const returnTo = urlParams.get('returnTo') || '../pages/shop.html'; // Fallback
     const backUrl = brandSlug
-      ? `/pages/brand.html?brand=${brandSlug}`
+      ? `../pages/brand.html?brand=${brandSlug}`
       : returnTo;
     console.log('Return to:', returnTo);
 

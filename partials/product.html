@@ -13,9 +13,10 @@
     const brandSlug = urlParams.get('brand');
     const returnTo = urlParams.get('returnTo') || '../pages/shop.html'; // Fallback
     const backUrl = brandSlug
-      ? `../pages/brand.html?brand=${brandSlug}`
+      ? `../pages/brand.html?brand=${encodeURIComponent(brandSlug)}`
       : returnTo;
-    console.log('Return to:', returnTo);
+
+    console.log('brandSlug:', encodeURIComponent(brandSlug));
 
     document.getElementById('back-button').addEventListener('click', () => {
       window.location.href = returnTo; // Redirect to the stored page

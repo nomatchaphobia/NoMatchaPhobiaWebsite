@@ -97,6 +97,16 @@ header {
 
 header h1 {
     margin: 0 0 10px;
+    font-size: 75px;
+}
+
+/* Paragraph styles */
+p1{
+    font-size: 25px;
+}
+
+p2{
+    font-size: 35px;
 }
 
 /* Section: In stock products */
@@ -210,6 +220,11 @@ footer {
 .product-detail .description {
     margin-top: 15px;
     font-size: 1em;
+}
+
+/* Details button styles*/
+a {
+    text-decoration: none;
 }
 
 a.btn {

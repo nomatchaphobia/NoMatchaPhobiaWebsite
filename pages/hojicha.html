@@ -11,50 +11,39 @@
 <body>
 
     <div id="nav-container"></div>
-  <script>
-    fetch('../partials/nav.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('nav-container').innerHTML = html;
-    })
-    .catch(err => console.error('Failed to load navigation:', err));
-  </script>
+    <script>
+        fetch('../partials/nav.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('nav-container').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load navigation:', err));
+    </script>
     <main>
         <header>
             <h1>Hojicha Products</h1>
             <p>Explore our premium selection of Hojicha from various brands.</p>
         </header>
 
-        <div id="products-list" class="products-grid">
-    </div>
-            <aside class="brand-list">
-                <h3>Brands</h3>
-                <ul>
-                    <li><a href="../pages/brand.html?brand=Marukyu%20Koyamaen">Marukyu Koyamen</a></li>
-                    <li><a href="matcha-brandB.html">Brand B</a></li>
-                    <li><a href="matcha-brandC.html">Brand C</a></li>
-                </ul>
-            </aside>
-        </div>
-
+        <div id="products-list" class="products-grid"></div>
     </main>
 
     <div id="footer-container"></div>
-  <script>
-    fetch('../partials/footer.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('footer-container').innerHTML = html;
-    })
-    .catch(err => console.error('Failed to load footer', err));
-  </script>
+    <script>
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-container').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load footer', err));
+    </script>
 
 </body>
 
 <script src="../assets/js/products.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      renderProducts('hojicha');  // Only shows matcha
+        renderProducts('hojicha');  // Only shows matcha
     });
 </script>
 

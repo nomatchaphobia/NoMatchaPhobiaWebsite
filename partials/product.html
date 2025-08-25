@@ -34,14 +34,8 @@
       backButton.textContent = '← Return to Hojicha';
     } else if (returnTo.includes('utensil')) {
       backButton.textContent = '← Return to Utensils';
-    } else if (returnTo.includes('Marukyu Koyamaen')) {
-      backButton.textContent = '← Return to Marukyu Koyamaen';
-    } else if (returnTo.includes('Kanbayashi Shunsho')) {
-      backButton.textContent = '← Return to Kanbayashi Shunsho';
-    } else if (returnTo.includes('Hoho')) {
-      backButton.textContent = '← Return to Hoho';
-    } else if (returnTo.includes('Yamamasa Koyamaen')) {
-      backButton.textContent = '← Return to Yamamasa Koyamaen';
+    } else if (brand){
+      backButton.textContent = '← Return to ' + brand;
     }
     else {
       backButton.textContent = '← Return to Shop';

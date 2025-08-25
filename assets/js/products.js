@@ -4,7 +4,7 @@ const products = [
     id: "kinrin",
     name: "Kinrin - Marukyu Koyamaen",
     category: "matcha",
-    price: "$48.00",
+    price: "$50.00",
     image: "assets/images/matcha/kinrin.png",
     description: "",
     brand: "Marukyu Koyamaen",
@@ -14,11 +14,11 @@ const products = [
     id: "aoarashi",
     name: "Aoarashi - Marukyu Koyamaen",
     category: "matcha",
-    price: "$50",
+    price: "$55",
     image: "assets/images/matcha/aoarashi.png",
     description: "",
     brand: "Marukyu Koyamaen",
-    stock: 2,
+    stock: 0,
   },
   {
     id: "wako",
@@ -98,7 +98,7 @@ const products = [
     image: "assets/images/matcha/biwanoshiro.png",
     description: "",
     brand: "Kanbayashi Shunsho",
-    stock: 1,
+    stock: 0,
   },
   {
     id: "yaeyama",
@@ -118,7 +118,7 @@ const products = [
     image: "assets/images/matcha/samidori.png",
     description: "",
     brand: "Yamamasa Koyamaen",
-    stock: 2,
+    stock: 0,
   },
   {
     id: "hohopremium",
@@ -128,7 +128,7 @@ const products = [
     image: "assets/images/",
     description: "",
     brand: "Hoho",
-    stock: 10,
+    stock: 8,
   },
   {
     id: "ykrich",
@@ -138,7 +138,7 @@ const products = [
     image: "assets/images/hojicha/richyk.png",
     description: "",
     brand: "Yamamasa Koyamaen",
-    stock: 4,
+    stock: 3,
   },
   {
     id: "resinwhisk",

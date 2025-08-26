@@ -251,3 +251,48 @@ a.btn {
     font-size: 1rem;
     transition: background 0.3s;
 }
+
+/*  Contact Us  */
+
+.contact-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-family: Arial, sans-serif;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.contact-form textarea {
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+.contact-form button {
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #005fa3;
+}

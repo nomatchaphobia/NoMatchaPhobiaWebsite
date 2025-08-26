@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matcha - nomatchaphobia</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <div id="nav-container"></div>
+    <script>
+        fetch('../partials/nav.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('nav-container').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load navigation:', err));
+    </script>
+    <main>
+        <header>
+            <h1>Contact Us</h1>
+            <p>If you have any questions or inquiries, please fill out the form below:</p>
+        </header>
+
+        <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <div id="footer-container"></div>
+    <script>
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-container').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load footer', err));
+    </script>

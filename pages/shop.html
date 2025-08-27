@@ -11,14 +11,7 @@
 <body>
 
   <div id="nav-container"></div>
-  <script>
-    fetch('../partials/nav.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('nav-container').innerHTML = html;
-    })
-    .catch(err => console.error('Failed to load navigation:', err));
-  </script>
+  
   <main>
     <h1>Our Products</h1>
     <div class="products-grid" id="products-list"></div>
@@ -36,6 +29,7 @@
 
 
   <script src="../assets/js/products.js"></script>
+  <script src="../assets/js/load_nav_bar.js"></script>
   <script>
     const productList = document.getElementById("products-list");
 

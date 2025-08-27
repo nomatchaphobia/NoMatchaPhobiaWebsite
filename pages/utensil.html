@@ -11,39 +11,32 @@
 <body>
 
     <div id="nav-container"></div>
-  <script>
-    fetch('../partials/nav.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('nav-container').innerHTML = html;
-    })
-    .catch(err => console.error('Failed to load navigation:', err));
-  </script>
+    <script src="../assets/js/load_nav_bar.js"></script>
     <main>
         <header>
             <h1>Utensil Products</h1>
             <p>Explore our premium selection of Utensils from various brands.</p>
         </header>
 
-        <div id="products-list" class="products-grid"></div>    
-    </main>
+        <div id="products-list" class="products-grid"></div>
+        </main>
 
-    <div id="footer-container"></div>
-  <script>
-    fetch('../partials/footer.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('footer-container').innerHTML = html;
-    })
-    .catch(err => console.error('Failed to load footer', err));
-  </script>
+        <div id="footer-container"></div>
+        <script>
+            fetch('../partials/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer-container').innerHTML = html;
+                })
+                .catch(err => console.error('Failed to load footer', err));
+        </script>
 
 </body>
 
 <script src="../assets/js/products.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      renderProducts('utensil');  // Only shows matcha
+        renderProducts('utensil');  // Only shows matcha
     });
 </script>
 

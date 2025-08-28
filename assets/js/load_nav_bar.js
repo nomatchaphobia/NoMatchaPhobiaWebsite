@@ -1,6 +1,6 @@
 // Function to load the navbar
 function loadNavbar() {
-    fetch('../partials/nav.html') // Go get the HTML file
+    fetch('../../partials/nav.html') // Go get the HTML file
         .then(response => response.text()) // Read its text content
         .then(html => {
             // Find the placeholder div and insert the navbar HTML

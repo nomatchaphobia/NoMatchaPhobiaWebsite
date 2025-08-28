@@ -8,9 +8,6 @@ function renderBrandProducts(brand) {
     ? products
     : products.filter(p => p.brand === brand);
 
-
-  const currentPath = encodeURIComponent(window.location.pathname);
-  const currentBrand = encodeURIComponent(brand)
   container.innerHTML = filteredProducts.length > 0
     ? filteredProducts.map(product => `
         <div class="product-card">

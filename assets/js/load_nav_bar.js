@@ -1,13 +1,10 @@
-// Function to load the navbar
 function loadNavbar() {
-    fetch('../partials/nav.html') // Go get the HTML file
-        .then(response => response.text()) // Read its text content
+    fetch('../partials/nav.html') 
+        .then(response => response.text()) 
         .then(html => {
-            // Find the placeholder div and insert the navbar HTML
             document.getElementById('nav-container').innerHTML = html;
         })
-        .catch(error => console.error('Failed to load navbar:', error));
+        .catch(err => console.error('Failed to load navbar:', err));
 }
 
-// Run the function when the page is done loading
 document.addEventListener('DOMContentLoaded', loadNavbar);

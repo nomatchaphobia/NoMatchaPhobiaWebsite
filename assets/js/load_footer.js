@@ -1,5 +1,5 @@
 function loadFooter() {
-    fetch('../partials/footer.html')
+    fetch('../includes/footer.php')
         .then(response => response.text())
         .then(html => {
             document.getElementById('footer-container').innerHTML = html;

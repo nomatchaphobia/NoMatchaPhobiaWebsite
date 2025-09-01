@@ -1,5 +1,5 @@
 function loadNavbar() {
-    fetch('../includes/nav.php') 
+    fetch('../partials/nav.html') 
         .then(response => response.text()) 
         .then(html => {
             document.getElementById('nav-container').innerHTML = html;

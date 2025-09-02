@@ -4,11 +4,12 @@ const products = [
     id: "kinrin",
     name: "Kinrin - Marukyu Koyamaen",
     category: "matcha",
-    price: "$50.00",
+    price: "$50",
     image: "assets/images/matcha/kinrin.png",
-    description: "",
+    description: "20 grams, very outstanding matcha with a rich flavor and a sweet aftertaste. Perfect for daily use.",
     brand: "Marukyu Koyamaen",
     stock: 1,
+    weight: 20,
   },
   {
     id: "aoarashi",
@@ -19,6 +20,7 @@ const products = [
     description: "",
     brand: "Marukyu Koyamaen",
     stock: 0,
+    weight: 20,
   },
   {
     id: "wako",
@@ -29,6 +31,7 @@ const products = [
     description: "",
     brand: "Marukyu Koyamaen",
     stock: 5,
+    weight: 40,
   },
   {
     id: "isuzu",
@@ -39,6 +42,7 @@ const products = [
     description: "",
     brand: "Marukyu Koyamaen",
     stock: 0,
+    weight: 40,
   },
   {
     id: "ayanoshiro",
@@ -49,6 +53,7 @@ const products = [
     description: "",
     brand: "Marukyu Koyamaen",
     stock: 1,
+    weight: 40,
   },
   {
     id: "miyonomukashi",
@@ -59,6 +64,7 @@ const products = [
     description: "",
     brand: "Marukyu Koyamaen",
     stock: 1,
+    weight: 40,
   },
   {
     id: "ayanomori",
@@ -69,6 +75,7 @@ const products = [
     description: "",
     brand: "Kanbayashi Shunsho",
     stock: 0,
+    weight: 40,
   },
   {
     id: "matsukaze",
@@ -79,6 +86,7 @@ const products = [
     description: "",
     brand: "Kanbayashi Shunsho",
     stock: 2,
+    weight: 40,
   },
   {
     id: "gounnoshiro",
@@ -89,6 +97,7 @@ const products = [
     description: "",
     brand: "Kanbayashi Shunsho",
     stock: 1,
+    weight: 40,
   },
   {
     id: "biwanoshiro",
@@ -99,6 +108,7 @@ const products = [
     description: "",
     brand: "Kanbayashi Shunsho",
     stock: 0,
+    weight: 0,
   },
   {
     id: "yaeyama",
@@ -109,6 +119,7 @@ const products = [
     description: "",
     brand: "Aoi Seicha",
     stock: 1,
+    weight: 30,
   },
   {
     id: "samidori",
@@ -119,6 +130,7 @@ const products = [
     description: "",
     brand: "Yamamasa Koyamaen",
     stock: 0,
+    weight: 30,
   },
   {
     id: "hohopremium",
@@ -129,6 +141,7 @@ const products = [
     description: "",
     brand: "Hoho",
     stock: 8,
+    weight: 80,
   },
   {
     id: "ykrich",
@@ -139,6 +152,7 @@ const products = [
     description: "",
     brand: "Yamamasa Koyamaen",
     stock: 3,
+    weight: 100,
   },
   {
     id: "resinwhisk",
@@ -149,6 +163,7 @@ const products = [
     description: "",
     brand: "Nakamura Tokichi",
     stock: 1,
+    weight: 0,
   },
 ];
 

@@ -12,7 +12,10 @@ function renderProducts(category) {
     <div class="product-card">
       <img src="../${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
-      <p>${product.price}</p>
+      ${product.weight > 0
+        ? `<p>${product.price} for ${product.weight}</p>`
+        : `<p>${product.price}</p>`
+      }
       <a href="../partials/product.html?id=${product.id}&returnTo=${encodeURIComponent(window.location.pathname)}" class="btn">View Details</a>
       <!--${product.stock > 0
       ? `<button class="add-to-cart">Add to Cart</button>`

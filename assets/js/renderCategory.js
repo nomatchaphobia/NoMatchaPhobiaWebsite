@@ -13,7 +13,7 @@ function renderProducts(category) {
       <img src="../${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       ${product.weight > 0
-        ? `<p>${product.price} for ${product.weight}</p>`
+        ? `<p>${product.price} - ${product.weight}g</p>`
         : `<p>${product.price}</p>`
       }
       <a href="../partials/product.html?id=${product.id}&returnTo=${encodeURIComponent(window.location.pathname)}" class="btn">View Details</a>

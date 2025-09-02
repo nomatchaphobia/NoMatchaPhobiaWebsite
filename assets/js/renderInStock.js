@@ -8,7 +8,7 @@ function renderInStock() {
           <img src="${p.image}" alt="${p.name}">
           <h3>${p.name}</h3>
           ${p.weight > 0
-            ? `<p>${p.price} for ${p.weight}</p>`
+            ? `<p>${p.price} - ${p.weight}g</p>`
             : `<p>${p.price}</p>`
           }
           

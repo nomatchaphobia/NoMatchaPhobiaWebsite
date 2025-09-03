@@ -5,7 +5,7 @@ function loadNavbar() {
             document.getElementById('nav-container').innerHTML = html;
 
             // Dynamically load nav scripts after nav is present
-            ['mobile_nav.js', 'navDelay.js'].forEach(src => {
+            ['../assets/js/mobile_nav.js', '../assets/js/navDelay.js'].forEach(src => {
               const script = document.createElement('script');
               script.src = src;
               document.body.appendChild(script);

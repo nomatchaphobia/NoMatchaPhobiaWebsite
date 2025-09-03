@@ -11,35 +11,45 @@
 <body>
 
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-                <a href="pages/shop.html">Shop</a>
-                <ul>
-                    <li>
-                        <a href="pages/matcha.html">Matcha</a>
-                        <ul>
-                            <li><a href="pages/brand.html?brand=Marukyu%20Koyamaen">Marukyu Koyamaen</a></li>
-                            <li><a href="pages/brand.html?brand=Kanbayashi%20Shunsho">Kanbayashi Shunsho</a></li>
-                            <li><a href="pages/brand.html?brand=Aoi%20Seicha">Aoi Seicha</a></li>
-                            <li><a href="pages/brand.html?brand=Yamamasa%20Koyamaen">Yamamasa Koyamaen</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="pages/hojicha.html">Hojicha</a>
-                        <ul>
-                            <li><a href="pages/brand.html?brand=Hoho">Hoho</a></li>
-                            <li><a href="pages/brand.html?brand=Yamamasa%20Koyamaen">Yamamasa Koyamaen</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="pages/utensil.html">Utensil</a></li>
-                </ul>
-            </li>
-            <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    nomatchaphobia
+                </a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="menu-item-has-children">
+                    <a href="pages/shop.html">Shop</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item-has-children">
+                            <a href="pages/matcha.html">Matcha</a>
+                            <ul class="sub-menu">
+                                <li><a href="pages/brand.html?brand=Marukyu%20Koyamaen">Marukyu Koyamaen</a></li>
+                                <li><a href="pages/brand.html?brand=Kanbayashi%20Shunsho">Kanbayashi Shunsho</a></li>
+                                <li><a href="pages/brand.html?brand=Aoi%20Seicha">Aoi Seicha</a></li>
+                                <li><a href="pages/brand.html?brand=Yamamasa%20Koyamaen">Yamamasa Koyamaen</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="pages/hojicha.html">Hojicha</a>
+                            <ul class="sub-menu">
+                                <li><a href="pages/brand.html?brand=Hoho">Hoho</a></li>
+                                <li><a href="pages/brand.html?brand=Yamamasa%20Koyamaen">Yamamasa Koyamaen</a></li>
+                        <li><a href="pages/utensil.html">Utensils</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Gardening Supplies</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-
 
     <main>
         <header>
@@ -64,6 +74,7 @@
 
     <script src="assets/js/products.js"></script>
     <script src="assets/js/renderInStock.js"></script>
+    <script src="assets/js/mobile_nav.js"></script>
 
 </body>
 

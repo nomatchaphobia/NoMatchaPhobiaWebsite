@@ -208,6 +208,21 @@ header h1 {
     align-items: center;
 }
 
+.product-card.sold-out {
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    align-items: center;
+    filter: grayscale(70%) opacity(80%); 
+    background-color: #f8f8f8;
+}
+
+
 .product-card:hover {
     box-shadow: var(--box-shadow-hover);
     transform: translateY(-5px);

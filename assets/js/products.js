@@ -89,17 +89,6 @@ const products = [
     weight: 40,
   },
   {
-    id: "gounnoshiro",
-    name: "Goun no Shiro - Kanbayashi Shunsho",
-    category: "matcha",
-    price: "$56",
-    image: "assets/images/matcha/gounnoshiro.png",
-    description: "",
-    brand: "Kanbayashi Shunsho",
-    stock: 1,
-    weight: 40,
-  },
-  {
     id: "biwanoshiro",
     name: "Biwa no Shiro - Kanbayashi Shunsho",
     category: "matcha",

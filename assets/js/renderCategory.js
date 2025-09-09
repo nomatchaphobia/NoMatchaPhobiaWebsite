@@ -13,7 +13,7 @@ function renderProducts(category) {
             return `
                 <div class="product-card sold-out">
                   <img src="../${product.image}" alt="${product.name}">
-                  <h3>${product.name} (sold out)</h3>
+                  <h3>${product.name} (Sold Out)</h3>
                   ${product.weight > 0
                     ? `<p>${product.price} - ${product.weight}g</p>`
                     : `<p>${product.price}</p>`

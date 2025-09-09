@@ -323,6 +323,12 @@ a {
     transform: translateY(-2px);
 }
 
+#back-button {
+    display: block;
+    margin: var(--spacing-md) auto var(--spacing-md) auto;
+    text-align: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     :root {
